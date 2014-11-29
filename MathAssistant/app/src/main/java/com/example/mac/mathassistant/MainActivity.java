@@ -1,17 +1,29 @@
 package com.example.mac.mathassistant;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.example.mac.mathassistant.Fragment.numbersFragment;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
+
+    private FragmentManager mFragmentManager;
+    private FragmentTransaction mFragmentTransaction;
+    private Fragment mCurrentFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mFragmentManager = getFragmentManager();
     }
 
 
@@ -35,5 +47,37 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        mFragmentTransaction = mFragmentManager.beginTransaction();
+        switch (view.getId()) {
+            case R.id.button1:
+                mCurrentFragment = new numbersFragment();
+                mFragmentTransaction.add(mCurrentFragment, null);
+                break;
+            case R.id.button2:
+                break;
+            case R.id.button3:
+                break;
+            case R.id.button4:
+                break;
+            case R.id.button5:
+                break;
+            case R.id.button6:
+                break;
+            case R.id.button7:
+                break;
+            case R.id.button8:
+                break;
+            case R.id.button9:
+                break;
+            case R.id.button10:
+                break;
+            default:
+                break;
+        }
+        mFragmentTransaction.commit();
     }
 }

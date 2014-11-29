@@ -2,7 +2,16 @@
 <resources>
 
     <string name="app_name">MathAssistant</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Настройки</string>
+    <string name="numbers">Числа</string>
+    <string name="equations">Уравнения</string>
+    <string name="progression">Прогрессия</string>
+    <string name="trigonometry">Триганометрия</string>
+    <string name="planimetry">Планиметрия</string>
+    <string name="stereometry">Стереометрия</string>
+    <string name="matrix">Матрицы</string>
+    <string name="slau">Системы линейных уравнений</string>
+    <string name="vector">Векторы</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
